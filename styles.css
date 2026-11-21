@@ -1,1 +1,107 @@
 
+/* 1. Global styles */
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+    margin: 0;
+    font-family: "DM Sans", Arial, sans-serif;
+    text-align: center;
+    color: #344b49;
+    background-color: #fffefa;
+}
+h1, h2, h3, p { margin-top: 0; }
+h2 { color: #276e69; font-size: 2rem; }
+h3 { color: #276e69; font-size: 1.25rem; }
+p { line-height: 1.8; }
+a { color: inherit; text-decoration: none; }
+
+/* 2. Header and navigation */
+.hero {
+    position: relative;
+    overflow: hidden;
+    background-color: #d9efea;
+    padding: 28px 24px 0;
+}
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.site-name { font-size: 1.6rem; font-weight: 700; color: #276e69; }
+.nav-links { display: flex; gap: 28px; }
+.nav-links a:hover, footer a:hover { color: #16988f; }
+.hero-text { position: relative; z-index: 1; padding-top: 85px; }
+.eyebrow, .section-label { color: #438a82; font-size: 0.75rem; font-weight: 700; letter-spacing: 3px; }
+h1 {
+    font-family: "Sacramento", cursive;
+    color: #28796f;
+    font-size: 6rem;
+    font-weight: normal;
+    margin-bottom: 0;
+}
+.hero h2 { font-size: 1.35rem; font-weight: 500; }
+.button {
+    display: inline-block;
+    margin-top: 18px;
+    padding: 13px 26px;
+    background-color: #28796f;
+    color: #fff;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+.button:hover { background-color: #18594f; }
+.cloud { position: absolute; width: 150px; }
+.cloud-right { right: 13%; top: 125px; }
+.cloud-left { left: 11%; bottom: 190px; }
+.mountain { display: block; width: 100%; max-width: 590px; margin: 55px auto 0; }
+
+/* 3. Main content */
+.section { max-width: 920px; margin: 0 auto; padding: 90px 24px; }
+.about { max-width: 650px; }
+.about p { max-width: 520px; margin: auto; }
+.hello-image { width: 115px; height: 115px; object-fit: contain; }
+hr { border: dotted #b6d0ca 7px; border-bottom: none; width: 65px; margin: 0 auto; }
+.interest-grid {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 35px 45px;
+    align-items: center;
+    max-width: 740px;
+    margin: 55px auto 0;
+    text-align: left;
+}
+.interest-image {
+    width: 200px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 16px;
+}
+.interest-description p { margin-bottom: 0; }
+.contact { max-width: 600px; }
+.contact .button { margin-top: 25px; }
+
+/* 4. Footer */
+footer { background-color: #28796f; color: #e4f5f1; padding: 35px 20px 22px; }
+footer p { margin: 16px 0 0; font-size: 0.85rem; }
+
+/* 5. Responsive layout - tablet and mobile */
+@media (max-width: 700px) {
+    .nav-links { gap: 14px; font-size: 0.9rem; }
+    .hero-text { padding-top: 65px; }
+    h1 { font-size: 4.5rem; }
+    .hero h2 { font-size: 1.1rem; }
+    .cloud { width: 95px; }
+    .cloud-right { right: 4%; top: 125px; }
+    .cloud-left { left: 2%; bottom: 100px; }
+    .section { padding: 65px 22px; }
+    .interest-grid { grid-template-columns: 1fr; gap: 15px; text-align: center; }
+    .interest-image { margin: 10px auto 0; }
+    .interest-description { margin-bottom: 20px; }
+}
+@media (max-width: 400px) {
+    .nav-links { gap: 10px; font-size: 0.8rem; }
+    h1 { font-size: 4rem; }
+    .eyebrow { letter-spacing: 1px; }
+}
